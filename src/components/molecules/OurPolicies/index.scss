@@ -1,0 +1,44 @@
+h2{
+	font-size: 24px;
+	padding-bottom: 15px;
+}
+.bottom-line{
+	width: 25px;
+	height: 3px;
+	background-color: #003F5A;
+}
+
+.fea > div{
+	padding-bottom: 50px;
+}
+.fea-img {
+    width: 20%;
+}
+.heading {
+    width: 80%;
+}
+.fea i {
+    font-size: 39px;
+    color: #2F746F;
+    margin-top: 7px;
+}
+
+.fea span>h5{
+    display: inline;
+}
+
+.fea .benefits{
+    list-style: initial
+}
+.heading h4 {
+    font-family: AvenirNext ,'Open Sans';
+    font-size: 17px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin: 10px 0px;
+    text-align: left;
+}
+.heading p {
+    text-align: left;
+}
