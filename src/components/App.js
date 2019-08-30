@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import { Route } from 'react-router-dom'
-import './App.css';
 
-import HomePage from './components/pages/HomePage'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (

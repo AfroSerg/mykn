@@ -1,0 +1,69 @@
+.policy-plan-card{
+    position: relative;
+    border: 1px solid #4A4A4A;
+    padding: 10px 15px;
+    &__logo{
+        width: 150px;
+        fill: #2F746F;
+    }
+    &__plan-header{
+        font-family: AvenirNext;
+        font-weight: 500;
+        font-size: 14px;
+        color: #4A4A4A;
+        margin-bottom: 15px;
+    }
+    &__premium{
+        display: block;
+        h5{
+            display: inline;
+        }
+        margin-bottom: 10px;
+    }
+
+    &__benefits{
+        
+        h6{
+            font-family: AvenirNext;
+            font-weight: 400;
+            font-size: 14px;
+            color: #4A4A4A;
+        }
+        ul{
+            padding-left: 10px;
+            li{
+                list-style: initial;
+            }
+            
+        }
+        
+    }
+
+    &__btn-group{
+        display: block;
+        width: 100%;
+        height: 60px;
+        margin-top: 10px;
+        &__sign-up-btn{
+            float: right;
+            padding: 10px 20px; 
+            background-color: #2F746F;
+            color: #fff;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            border-radius: 0;
+            border: none;
+            &:hover, &:focus{
+                background-color: #fff;
+                color: #2F746F;
+                border-color: #2f746f;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    
+}

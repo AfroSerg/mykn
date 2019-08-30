@@ -19,7 +19,7 @@ function Header() {
           <ul className="nav navbar-nav navbar-right">
             <li><a href="#our-policies">Our Policies</a></li>
             <li><a href="#footer">Contact Us</a></li>
-            <li className="sign-up-btn"><a href="">Sign Up</a></li>
+            <li className="sign-up-btn"><button onClick={() => console.log('Clicked Sign Up')}>Sign Up</button></li>
           </ul>
         </div>
       </div>

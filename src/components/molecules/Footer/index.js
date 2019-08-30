@@ -10,7 +10,7 @@ const Footer = () => (
                 <p>Have a query? Drop us a message</p>
             </div>
 
-            <form action="" method="post" role="form" className="contactForm">
+            <form action="" method="post" className="contactForm">
                 <div className="col-md-6 col-sm-6 col-xs-12 left">
                     <div className="form-group">
                         <input type="text" name="name" className="form-control form" id="name" placeholder="Your Name"
@@ -49,8 +49,8 @@ const Footer = () => (
                 <li><a href="https://instagram.com/gyknlife"><i className="fa fa-instagram fa-fw"></i></a></li>
                 <li><a href="https://twitter.com/gyknlife"><i className="fa fa-twitter fa-fw"></i></a></li>
             </ul>
-            © {new Date().getFullYear()} GYKN Life (PTY) Ltd Juristic Representative. 2019/329894/07 | Suite 8, 8 Pieter Str, Q-Kon Building, Highveld Techno Park, Centurion | 012 665 1469 | info@gyknlife.co.za
-    </div>
+            <p className="footer-stuff">© {new Date().getFullYear()} GYKN Life (PTY) Ltd Juristic Representative. 2019/329894/07 | Suite 8, 8 Pieter Str, Q-Kon Building, Highveld Techno Park, Centurion | 012 665 1469 | info@gyknlife.co.za</p>
+        </div>
     </footer>
 
 )

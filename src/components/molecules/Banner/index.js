@@ -19,7 +19,7 @@ function Banner() {
                 members. Our policies pays out your valid claim with 48 hours.</p>
                 <div className="btn-group">
                   <a href="#footer" className="btn btn-2 get-quote">Contact Us</a>
-                  <a href="" className="btn get-quote">Sign Up</a>
+                  <button onClick={() => console.log('Clicked SignUp')} className="btn get-quote">Sign Up</button>
                 </div>
 
               </div>
