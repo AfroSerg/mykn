@@ -2,7 +2,7 @@ import React from "react"
 import './index.scss'
 import PolicyPlanCard from "../../atoms/PolicyPlanCard";
 
-function OurPolicies({ plans }) {
+function OurPolicies({ plans, toggleModal }) {
   return (
     <section id="our-policies" className="section-padding">
       <div className="container">
@@ -15,8 +15,8 @@ function OurPolicies({ plans }) {
           <div className="feature-info">
             {
               plans.map((plan, key) => (
-                <div className="col-md-6">
-                  <PolicyPlanCard plan={plan} />
+                <div key={key} className="col-md-6">
+                  <PolicyPlanCard plan={plan} toggleModal={toggleModal} />
                 </div>)
               )
             }
@@ -26,6 +26,4 @@ function OurPolicies({ plans }) {
     </section>
   )
 }
-
-
 export default OurPolicies

@@ -2,7 +2,7 @@ import React from "react"
 import './index.scss'
 import logo from '../../../assets/images/GYKN.png'
 
-function Header() {
+function Header({ toggleModal }) {
 
   return (
     <nav className="navbar navbar-default navbar-fixed-top">
@@ -19,7 +19,7 @@ function Header() {
           <ul className="nav navbar-nav navbar-right">
             <li><a href="#our-policies">Our Policies</a></li>
             <li><a href="#footer">Contact Us</a></li>
-            <li className="sign-up-btn"><button onClick={() => console.log('Clicked Sign Up')}>Sign Up</button></li>
+            <li className="sign-up-btn"><button onClick={() => toggleModal(true)}>Sign Up</button></li>
           </ul>
         </div>
       </div>

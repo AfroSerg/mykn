@@ -1,7 +1,7 @@
 .policy-plan-card{
     position: relative;
-    border: 1px solid #4A4A4A;
     padding: 10px 15px;
+    height: 350px;
     &__logo{
         width: 150px;
         fill: #2F746F;
@@ -41,11 +41,13 @@
 
     &__btn-group{
         display: block;
+        position: absolute;
+        bottom: 15px;
         width: 100%;
         height: 60px;
-        margin-top: 10px;
         &__sign-up-btn{
             float: right;
+            margin-right: 15px;
             padding: 10px 20px; 
             background-color: #2F746F;
             color: #fff;

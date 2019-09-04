@@ -1,7 +1,7 @@
 import React from "react"
 import './index.scss'
 
-function Banner() {
+function Banner({ toggleModal }) {
 
   return (
     <div className="banner">
@@ -19,7 +19,7 @@ function Banner() {
                 members. Our policies pays out your valid claim with 48 hours.</p>
                 <div className="btn-group">
                   <a href="#footer" className="btn btn-2 get-quote">Contact Us</a>
-                  <button onClick={() => console.log('Clicked SignUp')} className="btn get-quote">Sign Up</button>
+                  <button onClick={() => toggleModal(true)} className="btn get-quote">Sign Up</button>
                 </div>
 
               </div>
