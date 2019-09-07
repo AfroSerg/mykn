@@ -1,22 +1,8 @@
 
 import React, { Component } from "react"
 import './index.scss'
-import ModalHeader from '../../atoms/ModalHeader';
-import PersonalDetailsFormPage from '../../atoms/PersonalDetailsFormPage'
-
-function FormSection({ pages }) {
-    return (
-        <form>
-            {pages[1].pageActive && <PersonalDetailsFormPage />}
-            <div>
-                <button>Previous</button>
-                <button>Next</button>
-                <button>Submit</button>
-            </div>
-        </form>
-    )
-}
-
+import ModalHeader from '../ModalHeader';
+import FormSection from '../FormSection'
 class SignUpModal extends Component {
     constructor(props) {
         super(props)
@@ -31,7 +17,7 @@ class SignUpModal extends Component {
                 {
                     pageNum: 2,
                     pageTitle: "Personal Details",
-                    pageActive: false,
+                    pageActive: true,
                 },
                 {
                     pageNum: 3,

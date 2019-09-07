@@ -1,6 +1,6 @@
 import React from "react"
 import './index.scss'
-import PolicyPlanCard from "../../atoms/PolicyPlanCard";
+import PolicyPlanCard from "../PolicyPlanCard";
 
 function OurPolicies({ plans, toggleModal }) {
   return (
