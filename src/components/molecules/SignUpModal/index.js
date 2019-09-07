@@ -32,9 +32,9 @@ class SignUpModal extends Component {
         const { toggleModal } = this.props;
         const { pages } = this.state;
         return (
-            <div className="sign-up-modal" onClick={() => toggleModal(false)}>
+            <div className="sign-up-modal">
                 <div className="sign-up-modal__container">
-                    <ModalHeader pages={pages} />
+                    <ModalHeader pages={pages} toggleModal={toggleModal} />
                     <FormSection pages={pages} />
                 </div>
             </div>

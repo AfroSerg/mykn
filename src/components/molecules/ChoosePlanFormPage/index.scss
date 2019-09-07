@@ -1,0 +1,15 @@
+.choose-plan-form-page{
+    display: block;
+    width: 100%;
+    padding: 20px;
+
+    h2::after{
+        content: "";
+        display: block;
+        margin-top: 5px;
+        position: absolute;
+        height: 2px;
+        width: 80px;
+        background: #2F746F;
+    }
+}

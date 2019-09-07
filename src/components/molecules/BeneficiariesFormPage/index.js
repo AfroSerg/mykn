@@ -1,10 +1,10 @@
 import React from 'react';
 import "./index.scss"
 
-function PersonalDetailsFormPage() {
+function BeneficiariesFormPage() {
     return (
-        <div className="personal-details-form-page">
-            <h2>Personal Details</h2>
+        <div className="beneficiaries-form-page">
+            <h2>Beneficiaries</h2>
             <div className="form-page-group">
                 <h4>Full Name</h4>
                 <div className="input-div">
@@ -33,31 +33,9 @@ function PersonalDetailsFormPage() {
                 <label>Identity Number</label>
                 <input type="text" placeholder="Please enter you ID Number" />
             </div>
-            <div className="input-div">
-                <label>Residential Address</label>
-                <textarea></textarea>
-            </div>
-            <div className="input-div">
-                <label>Postal</label>
-                <input type="checkbox" />
-                <textarea></textarea>
-            </div>
-            <div className="input-div">
-                <label>Telephone/Mobile</label>
-                <input type="text" placeholder="e.g. 0791628490" />
-            </div>
-            <div className="input-div">
-                <label>Email Address</label>
-                <input type="text" placeholder="e.g. johndoe@example.com" />
-            </div>
-
-            <div className="input-div">
-                <label>Do you have a Spouse?</label>
-                <input type="Checkbox" />
-            </div>
         </div>
 
     )
 }
 
-export default PersonalDetailsFormPage
+export default BeneficiariesFormPage

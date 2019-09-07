@@ -1,11 +1,42 @@
 .form-section{
-    .form-control{
+    .input-div{
+        display: block;
         label{
             display: block;
-            font-family: LemonMilk
+            font-family: AvenirNext;
+            font-weight: 500;
         }
         input, textarea{
             display: block;
+            margin-bottom: 15px;
+            border: 1px solid #003F5A;
+            padding: 0 15px;
+            color: #000;
+            &::placeholder{
+                color: #717f86;
+            }
+        }
+        input{
+            width: 300px;
+            height: 45px;
+            
+            
+        }
+        input[type="radio"]{
+            display: inline-block;
+            width: 50px;
+            
+        }
+        textarea{
+            resize: none;
+            width: 300px;
+            height: 100px;
+        }
+    }
+    .form-page-group{
+        > .input-div{
+            display: inline-block;
+            margin-right: 15px;
         }
     }
 }

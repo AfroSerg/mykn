@@ -10,6 +10,4 @@ function ModalHeader({ pages }) {
         </ul>
     )
 }
-
-
 export default ModalHeader
