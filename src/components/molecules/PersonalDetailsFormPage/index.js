@@ -1,5 +1,8 @@
 import React from 'react';
+import { Field } from 'formik'
+import TextInput from '../../atoms/TextInput'
 import "./index.scss"
+
 
 function PersonalDetailsFormPage() {
     return (
@@ -7,14 +10,8 @@ function PersonalDetailsFormPage() {
             <h2>Personal Details</h2>
             <div className="form-page-group">
                 <h4>Full Name</h4>
-                <div className="input-div">
-                    <label>First Name</label>
-                    <input type="text" placeholder="e.g. Jonathan" />
-                </div>
-                <div className="input-div">
-                    <label>Last Name</label>
-                    <input type="text" placeholder="e.g. Doe" />
-                </div>
+                <Field name="firstname" label="First Name(s)" component={TextInput} />
+                <Field name="lastname" label="Last Name" component={TextInput} />
             </div>
 
             <div className="form-page-group">
@@ -29,10 +26,7 @@ function PersonalDetailsFormPage() {
                 </div>
             </div>
 
-            <div className="input-div">
-                <label>Identity Number</label>
-                <input type="text" placeholder="Please enter you ID Number" />
-            </div>
+            <Field name="idnum" label="Identity Number" component={TextInput} />
             <div className="input-div">
                 <label>Residential Address</label>
                 <textarea></textarea>
@@ -42,14 +36,9 @@ function PersonalDetailsFormPage() {
                 <input type="checkbox" />
                 <textarea></textarea>
             </div>
-            <div className="input-div">
-                <label>Telephone/Mobile</label>
-                <input type="text" placeholder="e.g. 0791628490" />
-            </div>
-            <div className="input-div">
-                <label>Email Address</label>
-                <input type="text" placeholder="e.g. johndoe@example.com" />
-            </div>
+            <Field name="contactnum" label="Telephone/Mobile" component={TextInput} />
+            <Field name="email" label="Email Address" component={TextInput} />
+
 
             <div className="input-div">
                 <label>Do you have a Spouse?</label>

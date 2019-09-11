@@ -1,13 +1,17 @@
 import React from 'react';
 import './index.scss'
 
-function ModalHeader({ pages }) {
+function ModalHeader({ pages, toggleModal }) {
     return (
-        <ul className="modal-header">
-            {pages.map(({ pageNum, pageTitle, pageActive }) => (
-                <li key={pageNum} className={`modal-header__tab-item ${pageActive ? "-active" : null}`}><span>{`${pageNum}.  ${pageTitle}`}</span></li>
-            ))}
-        </ul>
+        <div className="modal-header">
+            <ul className="modal-header__tab-bar">
+                {pages.map(({ pageNum, pageTitle, pageActive }) => (
+                    <li key={pageNum} className={`modal-header__tab-bar__tab-item ${pageActive ? "-active" : null}`}><span>{`${pageNum}`}</span></li>
+                ))}
+            </ul>
+            <i className="fa fa-times" onClick={() => toggleModal(false)} />
+        </div>
+
     )
 }
 export default ModalHeader

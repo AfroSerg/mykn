@@ -6,32 +6,12 @@ function ChoosePlanFormPage() {
         <div className="choose-plan-form-page">
             <h2>Choose Your Plan</h2>
             <div className="form-page-group">
-                <h4>Full Name</h4>
-                <div className="input-div">
-                    <label>First Name</label>
-                    <input type="text" placeholder="e.g. Jonathan" />
-                </div>
-                <div className="input-div">
-                    <label>Last Name</label>
-                    <input type="text" placeholder="e.g. Doe" />
-                </div>
-            </div>
-
-            <div className="form-page-group">
-                <h4>Gender</h4>
-                <div className="input-div">
-                    <label>Male</label>
-                    <input type="radio" name="gender" />
-                </div>
-                <div className="input-div">
-                    <label>Female</label>
-                    <input type="radio" name="gender" />
-                </div>
-            </div>
-
-            <div className="input-div">
-                <label>Identity Number</label>
-                <input type="text" placeholder="Please enter you ID Number" />
+                <select>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
             </div>
         </div>
 

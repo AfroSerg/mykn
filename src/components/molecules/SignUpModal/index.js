@@ -24,18 +24,33 @@ class SignUpModal extends Component {
                     pageTitle: "Beneficiaries",
                     pageActive: false,
                 }
-            ]
+            ],
+            page: 0
         }
+
+        this.nextPage = this.nextPage.bind(this)
+        this.prevPage = this.prevPage.bind(this)
+    }
+    nextPage(e) {
+        e.preventDefault()
+        this.setState(({ page }) => ({ page: page + 1 }))
+    }
+    prevPage(e) {
+        e.preventDefault()
+        this.setState(({ page }) => ({ page: page - 1 }))
+    }
+    submit(values) {
+        console.log(`values: ${values}`)
     }
 
     render() {
         const { toggleModal } = this.props;
-        const { pages } = this.state;
+        const { pages, page } = this.state;
         return (
             <div className="sign-up-modal">
                 <div className="sign-up-modal__container">
                     <ModalHeader pages={pages} toggleModal={toggleModal} />
-                    <FormSection pages={pages} />
+                    <FormSection page={page} nextPage={this.nextPage} prevPage={this.prevPage} submit={this.submit} />
                 </div>
             </div>
         )
