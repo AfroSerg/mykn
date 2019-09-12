@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Field } from 'formik'
 import TextInput from '../../atoms/TextInput'
 import "./index.scss"
+import Switch from '../../atoms/Switch';
 
 
 function PersonalDetailsFormPage() {
+    const [hasSpouse, toggleHasSpouse] = useState(false);
+    const [sameAsResidential, toggleSameAsResidential] = useState(false)
     return (
         <div className="personal-details-form-page">
             <h2>Personal Details</h2>
@@ -33,16 +36,17 @@ function PersonalDetailsFormPage() {
             </div>
             <div className="input-div">
                 <label>Postal</label>
-                <input type="checkbox" />
+                <span>Same as residential?</span>
+                <Switch checked={sameAsResidential} toggleOnClicked={toggleSameAsResidential} />
                 <textarea></textarea>
             </div>
             <Field name="contactnum" label="Telephone/Mobile" component={TextInput} />
             <Field name="email" label="Email Address" component={TextInput} />
 
 
-            <div className="input-div">
-                <label>Do you have a Spouse?</label>
-                <input type="Checkbox" />
+            <div className="">
+                <span>Do you have a spouse?</span>
+                <Switch checked={hasSpouse} toggleOnClicked={toggleHasSpouse} />
             </div>
         </div>
 
