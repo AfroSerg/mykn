@@ -6,7 +6,8 @@ export const plans = [
             "R5 000 Cash back",
             "R500 Free airtime benefit",
             "R3 000 Accidental death benefit"
-        ]
+        ],
+        accent: "red"
     },
     {
         name: "YOUNG PROFESSIONALS CASH BACK PLAN",
@@ -16,7 +17,8 @@ export const plans = [
             "R700 Free airtime benefit",
             "R10 000 Accidental death benefit",
             "R5 000 Grocery benefit"
-        ]
+        ],
+        accent: "green"
     },
     {
         name: "ONE FAMILY CASH BACK PLAN",
@@ -26,7 +28,8 @@ export const plans = [
             "R1 000 Free airtime benefit",
             "R15 000 Accidental death benefit",
             "R9 000 Income protection benefit"
-        ]
+        ],
+        accent: "blue"
     },
     {
         name: "TRADITIONAL FAMILY CASH BACK PLAN",
@@ -34,7 +37,8 @@ export const plans = [
         benefits: [
             "R10 000 Cash back",
             "R5 000.00 Grocery benefit"
-        ]
+        ],
+        accent: "brown"
     },
 
 ]

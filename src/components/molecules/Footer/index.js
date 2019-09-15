@@ -13,7 +13,7 @@ const Footer = () => (
             <form action="" method="post" className="contactForm">
                 <div className="col-md-6 col-sm-6 col-xs-12 left">
                     <div className="form-group">
-                        <input type="text" name="name" className="form-control form" id="name" placeholder="Your Name"
+                        <input type="text" name="name" className="form-control" id="name" placeholder="Your Name"
                             data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                         <div className="validation"></div>
                     </div>
