@@ -3,8 +3,9 @@ import React from 'react';
 import { Form, Input } from 'antd';
 
 const { Item } = Form
+const { TextArea } = Input;
 
-function TextInput(
+function TextAreaInput(
     {
         field: { onChange, ...field },
         form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
@@ -15,9 +16,9 @@ function TextInput(
     const errorMsg = touched[field.name] && errors[field.name];
     return (
         <Item label={label} help={errorMsg} validateStatus={errorMsg ? "error" : undefined}>
-            <Input {...field} {...props} onChange={onChange} />
+            <TextArea autosize {...field} {...props} onChange={onChange} />
         </Item>
     )
 }
 
-export default TextInput
+export default TextAreaInput

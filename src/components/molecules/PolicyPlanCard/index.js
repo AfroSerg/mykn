@@ -21,5 +21,4 @@ function PolicyPlanCard({ plan }) {
         </div>
     )
 }
-
 export default PolicyPlanCard

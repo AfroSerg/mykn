@@ -8,11 +8,12 @@ function ChoosePlanFormPage() {
     return (
         <div className="choose-plan-form-page">
             <h2>Choose Your Plan</h2>
-            <div className="form-page-group">
-                <Field name="chooseplan" options={plans} label="Select The plan which you wish to apply for" component={SelectInput} />
+            <div className="choose-plan-form-page__container">
+                <div className="form-page-group">
+                    <Field name="choosePlan" defaultValue="Select a Plan." options={plans} label="Select the plan which you wish to apply for" component={SelectInput} />
+                </div>
             </div>
         </div>
-
     )
 }
 

@@ -13,8 +13,9 @@
         bottom: 0;
         width: 100%;
         max-width: 768px;
-        height: 640px;
+        height: 100vh;
+        max-height: 640px;
         background: #f9f7f6;
-        overflow: scroll;
+        overflow: hidden;
     }
 }

@@ -1,30 +1,31 @@
+import './index.scss'
 import React from 'react';
 import { Formik, Form } from 'formik'
 import ChoosePlanFormPage from '../ChoosePlanFormPage'
 import PersonalDetailsFormPage from '../PersonalDetailsFormPage'
 import BeneficiariesFormPage from '../BeneficiariesFormPage'
-import './index.scss'
 
-const pages = [<ChoosePlanFormPage />, <PersonalDetailsFormPage />, <BeneficiariesFormPage />]
+import { initialFormState } from "../../../data";
 
 function FormSection({ page, nextPage, prevPage, submit }) {
     return (
-        <Formik initialValues={{
-            firstname: "",
-            lastname: ""
-        }} onSubmit={submit}>
-            {() => (
-                <Form className="form-section">
-                    <div className="form-section__multi-page-container">
-                        {pages[page]}
-                    </div>
-                    <div className="form-section__button-group">
-                        {page !== 0 && <button onClick={prevPage}>Previous</button>}
-                        {page >= 0 && page !== pages.length - 1 && <button onClick={nextPage}>Next</button>}
-                        {page === pages.length - 1 && <button type="submit">Submit</button>}
-                    </div>
-                </Form>
-            )}
+        <Formik initialValues={initialFormState} onSubmit={submit}>
+            {({ values }) => {
+                return (
+                    <Form className="form-section">
+                        <div className="form-section__multi-page-container">
+                            {page === 0 && <ChoosePlanFormPage />}
+                            {page === 1 && <PersonalDetailsFormPage />}
+                            {page === 2 && <BeneficiariesFormPage />}
+                            <div className="form-section__button-group">
+                                {page === 2 && <button type="submit">Submit</button>}
+                                {page >= 0 && 2 && <button onClick={nextPage}>Next</button>}
+                                {page !== 0 && <button onClick={prevPage}>Previous</button>}
+                            </div>
+                        </div>
+                    </Form>
+                )
+            }}
         </Formik>
 
     )

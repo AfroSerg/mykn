@@ -1,10 +1,10 @@
-import './index.scss'
+import "./index.scss"
 import React from 'react';
-import { Form, Input } from 'antd';
+import { Form, Radio } from 'antd';
 
-const { Item } = Form
+const { Item } = Form;
 
-function TextInput(
+function RadioInput(
     {
         field: { onChange, ...field },
         form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
@@ -15,9 +15,11 @@ function TextInput(
     const errorMsg = touched[field.name] && errors[field.name];
     return (
         <Item label={label} help={errorMsg} validateStatus={errorMsg ? "error" : undefined}>
-            <Input {...field} {...props} onChange={onChange} />
+            <div className="radio-input">
+                <Radio.Group {...field} {...props} onChange={onChange} />
+            </div>
         </Item>
     )
 }
 
-export default TextInput
+export default RadioInput

@@ -1,0 +1,15 @@
+.switch-input{
+    display: block;
+    margin-bottom: 15px; 
+    button, &__label{
+        display: inline-block;
+        vertical-align: top;
+    }
+    &__label{
+        font-weight: 400;
+        margin-right: 10px;
+    }
+    button[aria-checked="true"]{
+        background-color: #30746f;
+    }
+}

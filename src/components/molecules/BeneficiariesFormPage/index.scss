@@ -12,4 +12,17 @@
         width: 80px;
         background: #2F746F;
     }
+
+    &__container{
+        height: calc(100vh - 230px);
+        overflow: scroll;
+    }
+}
+
+@media (min-height: 641px) {
+    .beneficiaries-form-page{
+        &__container{
+            height: 426px
+        }
+    }
 }

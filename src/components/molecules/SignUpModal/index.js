@@ -25,7 +25,7 @@ class SignUpModal extends Component {
                     pageActive: false,
                 }
             ],
-            page: 0
+            page: 1
         }
 
         this.nextPage = this.nextPage.bind(this)
@@ -49,7 +49,7 @@ class SignUpModal extends Component {
         return (
             <div className="sign-up-modal">
                 <div className="sign-up-modal__container">
-                    <ModalHeader pages={pages} toggleModal={toggleModal} />
+                    <ModalHeader pages={pages} currentPageIdx={page} toggleModal={toggleModal} />
                     <FormSection page={page} nextPage={this.nextPage} prevPage={this.prevPage} submit={this.submit} />
                 </div>
             </div>

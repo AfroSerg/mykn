@@ -7,7 +7,14 @@ export const plans = [
             "R500 Free airtime benefit",
             "R3 000 Accidental death benefit"
         ],
-        accent: "red"
+        accent: "red",
+        conditions: [
+            "Single member plan",
+            "3 month waiting period",
+            "Foreign Nationals with valid passport or work permit may apply",
+            "Free repartiation into furthest point of any SADC country",
+            "48 hour cash payout on successful claim"
+        ]
     },
     {
         name: "YOUNG PROFESSIONALS CASH BACK PLAN",
@@ -18,7 +25,14 @@ export const plans = [
             "R10 000 Accidental death benefit",
             "R5 000 Grocery benefit"
         ],
-        accent: "green"
+        accent: "green",
+        conditions: [
+            "Single member plan",
+            "6 month waiting period",
+            "Foreign Nationals with valid passport or work permit may apply",
+            "Free repartiation into furthest point of any SADC country",
+            "48 hour cash payout on successful claim"
+        ]
     },
     {
         name: "ONE FAMILY CASH BACK PLAN",
@@ -29,7 +43,15 @@ export const plans = [
             "R15 000 Accidental death benefit",
             "R9 000 Income protection benefit"
         ],
-        accent: "blue"
+        accent: "blue",
+        conditions: [
+            "Family plan, Main member, Spouse and up to 6 children",
+            "6 month waiting period",
+            "Foreign Nationals with valid passport or work permit may apply",
+            "Free repartiation into furthest point of any SADC country",
+            "48 hour cash payout on successful claim",
+            "Income protection benefit in case of main member death claim"
+        ]
     },
     {
         name: "TRADITIONAL FAMILY CASH BACK PLAN",
@@ -38,8 +60,24 @@ export const plans = [
             "R10 000 Cash back",
             "R5 000.00 Grocery benefit"
         ],
-        accent: "brown"
+        accent: "brown",
+        conditions: [
+            "Traditional society plan, main member + 9 extended",
+            "6 month waiting period",
+            "Free repartiation into furthest point of any SADC country",
+            "48 hour cash payout on successful claim"
+        ]
     },
-
 ]
 
+export const initialFormState = {
+    firstName: "",
+    lastName: "",
+    gender: "male",
+    identityNumber: "",
+    residentialAddress: "",
+    postalAddress: "",
+    contactNumber: "",
+    emailAddress: "",
+    hasSpouse: false,
+}

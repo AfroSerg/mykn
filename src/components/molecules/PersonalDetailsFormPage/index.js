@@ -1,52 +1,35 @@
-import React, { useState } from 'react';
+import "./index.scss"
+import React, { useState } from 'react'
 import { Field } from 'formik'
 import TextInput from '../../atoms/TextInput'
-import "./index.scss"
-import Switch from '../../atoms/Switch';
-
+import SwitchInput from '../../atoms/SwitchInput'
+import TextAreaInput from '../../atoms/TextAreaInput'
+import RadioInput from '../../atoms/RadioInput'
+import PersonalDetails from "../PersonalDetails"
 
 function PersonalDetailsFormPage() {
-    const [hasSpouse, toggleHasSpouse] = useState(false);
-    const [sameAsResidential, toggleSameAsResidential] = useState(false)
+    const [hasSpouse, toggleHasSpouse] = useState(false)
     return (
         <div className="personal-details-form-page">
             <h2>Personal Details</h2>
-            <div className="form-page-group">
-                <h4>Full Name</h4>
-                <Field name="firstname" label="First Name(s)" component={TextInput} />
-                <Field name="lastname" label="Last Name" component={TextInput} />
-            </div>
-
-            <div className="form-page-group">
-                <h4>Gender</h4>
-                <div className="input-div">
-                    <label>Male</label>
-                    <input type="radio" name="gender" />
+            <div className="personal-details-form-page__container">
+                <div className="form-page-group">
+                    <h4>Full Name</h4>
+                    <Field name="firstName" label="First Name(s):" placeholder="e.g John" component={TextInput} />
+                    <Field name="lastName" label="Last Name:" placeholder="e.g Doe" component={TextInput} />
                 </div>
-                <div className="input-div">
-                    <label>Female</label>
-                    <input type="radio" name="gender" />
+                <div className="form-page-group">
+                    <h4>Gender</h4>
+                    <Field name="gender" options={['male', 'female']} component={RadioInput} />
                 </div>
-            </div>
+                <Field name="identityNumber" label="Identity Number:" component={TextInput} />
 
-            <Field name="idnum" label="Identity Number" component={TextInput} />
-            <div className="input-div">
-                <label>Residential Address</label>
-                <textarea></textarea>
-            </div>
-            <div className="input-div">
-                <label>Postal</label>
-                <span>Same as residential?</span>
-                <Switch checked={sameAsResidential} toggleOnClicked={toggleSameAsResidential} />
-                <textarea></textarea>
-            </div>
-            <Field name="contactnum" label="Telephone/Mobile" component={TextInput} />
-            <Field name="email" label="Email Address" component={TextInput} />
-
-
-            <div className="">
-                <span>Do you have a spouse?</span>
-                <Switch checked={hasSpouse} toggleOnClicked={toggleHasSpouse} />
+                <Field name="residentialAddress" label="Residential Address:" component={TextAreaInput} />
+                <Field name="postalAddress" label="Postal Address:" component={TextAreaInput} />
+                <Field name="contactNumber" label="Telephone/Mobile" component={TextInput} />
+                <Field name="emailAddress" label="Email Address" component={TextInput} />
+                <SwitchInput name="hasSpouse" value={hasSpouse} label="Do you have a spouse?" onChange={toggleHasSpouse} />
+                {hasSpouse && <PersonalDetails />}
             </div>
         </div>
 
