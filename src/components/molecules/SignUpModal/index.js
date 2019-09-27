@@ -25,7 +25,7 @@ class SignUpModal extends Component {
                     pageActive: false,
                 }
             ],
-            page: 1
+            page: 0
         }
 
         this.nextPage = this.nextPage.bind(this)
