@@ -22,6 +22,7 @@
 	margin: 10px 5px;
 	padding: 10px 15px;
 }
+
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover
 {
 	color: #2F746F;
@@ -33,12 +34,14 @@
     outline: none;
 }
 
-.sign-up-btn button{
-	background-color: #2F746F;
+.navbar-nav > .sign-up-btn > button{
+    margin-left: 15px;
+    background-color: #2F746F;
 	color: #ffffff !important;
-	border: 1px solid #2F746F;
+    border: 1px solid #2F746F;
 }
-.sign-up-btn button:hover{
+
+.navbar-nav > .sign-up-btn > button:hover{
 	border: 1px solid #2F746F;
 	background-color: #fff;
 	color: #2F746F !important;
@@ -62,4 +65,12 @@
 }
 .mart20{
 	margin-top: 20px;
+}
+
+@media (min-height: 768px) {
+    .personal-details-form-page{
+        &__container{
+            height: 426px
+        }
+    }
 }

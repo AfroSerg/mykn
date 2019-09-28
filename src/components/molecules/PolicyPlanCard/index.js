@@ -15,9 +15,6 @@ function PolicyPlanCard({ plan }) {
                     {benefits.map((benefit, key) => (<li key={key}>{benefit}</li>))}
                 </ul>
             </div>
-            <div className="policy-plan-card__btn-group">
-                <button className="policy-plan-card__btn-group__sign-up-btn" onClick={() => console.log('sign up button')}>Sign Up</button>
-            </div>
         </div>
     )
 }

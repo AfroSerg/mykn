@@ -11,17 +11,15 @@ function FormSection({ page, nextPage, prevPage, submit }) {
     return (
         <Formik initialValues={initialFormState} onSubmit={submit}>
             {({ values }) => {
+                console.log(values);
+
+                const { chosenPlan } = values;
                 return (
                     <Form className="form-section">
                         <div className="form-section__multi-page-container">
-                            {page === 0 && <ChoosePlanFormPage />}
-                            {page === 1 && <PersonalDetailsFormPage />}
-                            {page === 2 && <BeneficiariesFormPage />}
-                            <div className="form-section__button-group">
-                                {page === 2 && <button type="submit">Submit</button>}
-                                {page >= 0 && 2 && <button onClick={nextPage}>Next</button>}
-                                {page !== 0 && <button onClick={prevPage}>Previous</button>}
-                            </div>
+                            {page === 0 && <ChoosePlanFormPage chosenPlan={chosenPlan} nextPage={nextPage} prevPage={prevPage} page={page} />}
+                            {page === 1 && <PersonalDetailsFormPage nextPage={nextPage} prevPage={prevPage} page={page} />}
+                            {page === 2 && <BeneficiariesFormPage nextPage={nextPage} prevPage={prevPage} page={page} />}
                         </div>
                     </Form>
                 )

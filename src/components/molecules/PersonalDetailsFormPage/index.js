@@ -6,8 +6,9 @@ import SwitchInput from '../../atoms/SwitchInput'
 import TextAreaInput from '../../atoms/TextAreaInput'
 import RadioInput from '../../atoms/RadioInput'
 import PersonalDetails from "../PersonalDetails"
+import FormButtonGroup from '../FormButtonGroup'
 
-function PersonalDetailsFormPage() {
+function PersonalDetailsFormPage({ prevPage, nextPage, page }) {
     const [hasSpouse, toggleHasSpouse] = useState(false)
     return (
         <div className="personal-details-form-page">
@@ -30,6 +31,7 @@ function PersonalDetailsFormPage() {
                 <Field name="emailAddress" label="Email Address" component={TextInput} />
                 <SwitchInput name="hasSpouse" value={hasSpouse} label="Do you have a spouse?" onChange={toggleHasSpouse} />
                 {hasSpouse && <PersonalDetails />}
+                <FormButtonGroup nextPage={nextPage} prevPage={prevPage} page={page} />
             </div>
         </div>
 

@@ -1,5 +1,6 @@
 export const plans = [
     {
+        plan_id: 0,
         name: "VALUE BACK CASH PLAN",
         premium: "R29.99p/m",
         benefits: [
@@ -14,9 +15,11 @@ export const plans = [
             "Foreign Nationals with valid passport or work permit may apply",
             "Free repartiation into furthest point of any SADC country",
             "48 hour cash payout on successful claim"
-        ]
+        ],
+        maxBeneficiares: 1
     },
     {
+        plan_id: 1,
         name: "YOUNG PROFESSIONALS CASH BACK PLAN",
         premium: "R79.99p/m",
         benefits: [
@@ -32,9 +35,11 @@ export const plans = [
             "Foreign Nationals with valid passport or work permit may apply",
             "Free repartiation into furthest point of any SADC country",
             "48 hour cash payout on successful claim"
-        ]
+        ],
+        maxBeneficiares: 1
     },
     {
+        plan_id: 2,
         name: "ONE FAMILY CASH BACK PLAN",
         premium: "R149.99p/m",
         benefits: [
@@ -51,9 +56,11 @@ export const plans = [
             "Free repartiation into furthest point of any SADC country",
             "48 hour cash payout on successful claim",
             "Income protection benefit in case of main member death claim"
-        ]
+        ],
+        maxBeneficiares: 6
     },
     {
+        plan_id: 3,
         name: "TRADITIONAL FAMILY CASH BACK PLAN",
         premium: "R249.99p/m",
         benefits: [
@@ -66,11 +73,13 @@ export const plans = [
             "6 month waiting period",
             "Free repartiation into furthest point of any SADC country",
             "48 hour cash payout on successful claim"
-        ]
+        ],
+        maxBeneficiares: 9
     },
 ]
 
 export const initialFormState = {
+    chosenPlan: "",
     firstName: "",
     lastName: "",
     gender: "male",
@@ -80,4 +89,12 @@ export const initialFormState = {
     contactNumber: "",
     emailAddress: "",
     hasSpouse: false,
+    spouse: {
+        hasSpouse: false,
+        firstName: "",
+        lastName: "",
+        gender: "male",
+        identityNumber: "",
+    },
+    beneficiaries: []
 }

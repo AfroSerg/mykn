@@ -1,42 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./index.scss"
+import FormButtonGroup from '../FormButtonGroup';
+import BeneficiaryCard from '../BeneficiaryCard';
 
-function BeneficiariesFormPage() {
+function BeneficiariesFormPage({ prevPage, nextPage, page }) {
+
+    const [canAddMoreBeneficiaries] = useState(true)
     return (
         <div className="beneficiaries-form-page">
             <h2>Beneficiaries</h2>
             <div className="beneficiaries-form-page__container">
-                <div className="form-page-group">
-                    <h4>Full Name</h4>
-                    <div className="input-div">
-                        <label>First Name</label>
-                        <input type="text" placeholder="e.g. Jonathan" />
-                    </div>
-                    <div className="input-div">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="e.g. Doe" />
-                    </div>
-                </div>
-
-                <div className="form-page-group">
-                    <h4>Gender</h4>
-                    <div className="input-div">
-                        <label>Male</label>
-                        <input type="radio" name="gender" />
-                    </div>
-                    <div className="input-div">
-                        <label>Female</label>
-                        <input type="radio" name="gender" />
-                    </div>
-                </div>
-
-                <div className="input-div">
-                    <label>Identity Number</label>
-                    <input type="text" placeholder="Please enter you ID Number" />
-                </div>
+                <BeneficiaryCard />
+                {canAddMoreBeneficiaries && <button >Add another beneficiary</button>}
+                <FormButtonGroup nextPage={nextPage} prevPage={prevPage} page={page} />
             </div>
         </div>
-
     )
 }
 

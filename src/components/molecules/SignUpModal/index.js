@@ -32,6 +32,8 @@ class SignUpModal extends Component {
         this.prevPage = this.prevPage.bind(this)
     }
     nextPage(e) {
+        console.log('nextpage');
+
         e.preventDefault()
         this.setState(({ page }) => ({ page: page + 1 }))
     }

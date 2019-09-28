@@ -7,7 +7,7 @@ import OurPolicies from '../../molecules/OurPolicies';
 import { plans } from '../../../data'
 
 function HomePage() {
-    const [isModalOpen, toggleModal] = useState(false)
+    const [isModalOpen, toggleModal] = useState(true)
     return (
         <DefaultLayout isModalOpen={isModalOpen} toggleModal={toggleModal}>
             <div className="home-page">

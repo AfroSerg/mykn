@@ -12,13 +12,15 @@ function SelectInput({
     options,
     ...props
 }) {
+    console.log(field, props);
+
     const errorMsg = touched[field.name] && errors[field.name];
     return (
         <Item label={label} help={errorMsg} validateStatus={errorMsg ? "error" : undefined}>
-            <Select style={{ width: 350 }} {...field} {...props} onChange={onChange}>
+            <Select {...field} {...props} onChange={(e) => { console.log('change', e); onChange(e) }}>
                 {options.map(
                     (opt, key) => (
-                        <Option key={key} value={opt.name}>{opt.name}</Option>
+                        <Option key={key} value={opt.plan_id}>{opt.name}</Option>
                     )
                 )}
             </Select>

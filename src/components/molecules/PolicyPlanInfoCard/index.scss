@@ -1,7 +1,8 @@
-.policy-plan-card{
+.policy-plan-info-card{
+    display: block;    
     position: relative;
     padding: 10px 15px;
-    height: 280px;
+    height: auto;
     &__logo{
         width: 150px;
     }
@@ -21,7 +22,6 @@
     }
 
     &__benefits{
-        
         h6{
             font-family: AvenirNext;
             font-weight: 400;
