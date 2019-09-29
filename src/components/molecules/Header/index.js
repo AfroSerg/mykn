@@ -4,7 +4,7 @@ import logo from '../../../assets/images/GYKN.png'
 
 function Header({ toggleModal }) {
 
-  const [isMenuOpen, toggleMenu] = useState(false)
+  const [isMenuClosed, toggleMenu] = useState(true)
   return (
     <nav className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -16,11 +16,11 @@ function Header({ toggleModal }) {
           </button>
           <a className="navbar-brand" href="index.html"><img src={logo} alt="GYKN Logo" /></a>
         </div>
-        <div className={`navbar-collapse ${isMenuOpen ? 'collapse' : undefined}`} id="myNavbar">
+        <div className={`navbar-collapse ${isMenuClosed ? 'collapse' : ''}`} id="myNavbar">
           <ul className="nav navbar-nav navbar-right">
-            <li><a href="#our-policies">Our Policies</a></li>
-            <li><a href="#footer">Contact Us</a></li>
-            <li className="sign-up-btn"><button onClick={() => toggleModal(true)}>Sign Up</button></li>
+            <li><a onClick={() => toggleMenu(true)} href="#our-policies">Our Policies</a></li>
+            <li><a onClick={() => toggleMenu(true)} href="#footer">Contact Us</a></li>
+            <li className="sign-up-btn"><button onClick={() => { toggleMenu(true); toggleModal(true) }}>Sign Up</button></li>
           </ul>
         </div>
       </div>

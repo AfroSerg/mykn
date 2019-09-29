@@ -2,7 +2,7 @@ import './index.scss'
 import React from 'react';
 import { Switch } from 'antd';
 
-function SwitchInput({ name, value, onChange, label }) {
+function SwitchInput({ value, onChange, label }) {
     return (
         <div className="switch-input">
             <label className="switch-input__label">{label}</label>

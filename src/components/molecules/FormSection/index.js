@@ -11,7 +11,6 @@ function FormSection({ page, nextPage, prevPage, submit }) {
     return (
         <Formik initialValues={initialFormState} onSubmit={submit}>
             {({ values }) => {
-                console.log(values);
 
                 const { chosenPlan } = values;
                 return (
