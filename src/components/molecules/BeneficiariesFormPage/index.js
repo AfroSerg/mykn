@@ -10,12 +10,14 @@ const initialBeneficiaryState = {
     identityNumber: "",
     relationship: ""
 }
+
 const beneficiariesReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_BENEFICIARY':
             return [...state, initialBeneficiaryState]
         case 'REMOVE_BENEFICIARY':
             return [...state.slice(0, action.payload), ...state.slice(action.payload + 1)];
+
         default:
             return state;
     }
@@ -28,9 +30,7 @@ function BeneficiariesList(
         ...props
     }
 ) {
-
     const addBeneficiary = () => {
-
         setFieldValue('beneficiaries', beneficiariesReducer(value, { type: 'ADD_BENEFICIARY' }))
     }
 
@@ -41,11 +41,9 @@ function BeneficiariesList(
             {true && <p onClick={addBeneficiary} ><i className="fa fa-plus" /> Add Another Beneficiary</p>}
         </>
     )
-
 }
 
 function BeneficiariesFormPage({ prevPage, nextPage, page }) {
-
     return (
         <div className="beneficiaries-form-page">
             <h2>Beneficiaries</h2>

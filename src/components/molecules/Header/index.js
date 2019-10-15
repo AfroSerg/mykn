@@ -14,7 +14,7 @@ function Header({ toggleModal }) {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand" href="index.html"><img src={logo} alt="GYKN Logo" /></a>
+          <a className="navbar-brand" href="#top"><img src={logo} alt="GYKN Logo" /></a>
         </div>
         <div className={`navbar-collapse ${isMenuClosed ? 'collapse' : ''}`} id="myNavbar">
           <ul className="nav navbar-nav navbar-right">

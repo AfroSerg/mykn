@@ -16,7 +16,7 @@ function Banner({ toggleModal }) {
                 <p className="small-text">GYKN LIFE is an Authorised Juristic Representative working under license with an
                   Authorised Financial Services Provider. We offer you a dignified funeral plan to cover yourself
                   and up to 12 family
-                members. Our policies pays out your valid claim with 48 hours.</p>
+                members. Our policies pays out your valid claim within 48 hours.</p>
                 <div className="btn-group">
                   <a href="#footer" className="btn btn-2 get-quote">Contact Us</a>
                   <button onClick={() => toggleModal(true)} className="btn get-quote">Sign Up</button>

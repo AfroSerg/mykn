@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/gykn/static/css/main.c0bc3aee.chunk.css",
-    "main.js": "/gykn/static/js/main.5326e57b.chunk.js",
-    "main.js.map": "/gykn/static/js/main.5326e57b.chunk.js.map",
-    "runtime~main.js": "/gykn/static/js/runtime~main.159421f5.js",
-    "runtime~main.js.map": "/gykn/static/js/runtime~main.159421f5.js.map",
-    "static/css/2.c66c7fbf.chunk.css": "/gykn/static/css/2.c66c7fbf.chunk.css",
-    "static/js/2.20f7f7f3.chunk.js": "/gykn/static/js/2.20f7f7f3.chunk.js",
-    "static/js/2.20f7f7f3.chunk.js.map": "/gykn/static/js/2.20f7f7f3.chunk.js.map",
-    "index.html": "/gykn/index.html",
-    "precache-manifest.f293694a86b7c47217e7fb80a4dd0dd9.js": "/gykn/precache-manifest.f293694a86b7c47217e7fb80a4dd0dd9.js",
-    "service-worker.js": "/gykn/service-worker.js",
-    "static/css/2.c66c7fbf.chunk.css.map": "/gykn/static/css/2.c66c7fbf.chunk.css.map",
-    "static/css/main.c0bc3aee.chunk.css.map": "/gykn/static/css/main.c0bc3aee.chunk.css.map",
-    "static/media/index.css": "/gykn/static/media/icomoon.a62d8fae.svg",
-    "static/media/index.scss": "/gykn/static/media/bg-banner.ce659d4a.jpg"
+    "main.css": "/static/css/main.d4ae3e7f.chunk.css",
+    "main.js": "/static/js/main.431e4b2f.chunk.js",
+    "main.js.map": "/static/js/main.431e4b2f.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.6706de6d.js",
+    "runtime~main.js.map": "/static/js/runtime~main.6706de6d.js.map",
+    "static/css/2.96121624.chunk.css": "/static/css/2.96121624.chunk.css",
+    "static/js/2.3377e00c.chunk.js": "/static/js/2.3377e00c.chunk.js",
+    "static/js/2.3377e00c.chunk.js.map": "/static/js/2.3377e00c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.5e3d75ea5752667d49e3fd62887febaa.js": "/precache-manifest.5e3d75ea5752667d49e3fd62887febaa.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.96121624.chunk.css.map": "/static/css/2.96121624.chunk.css.map",
+    "static/css/main.d4ae3e7f.chunk.css.map": "/static/css/main.d4ae3e7f.chunk.css.map",
+    "static/media/index.css": "/static/media/icomoon.a62d8fae.svg",
+    "static/media/index.scss": "/static/media/bg-banner.ce659d4a.jpg"
   }
 }
