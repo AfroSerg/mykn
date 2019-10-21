@@ -1,6 +1,6 @@
 import React from "react"
 import './index.scss'
-import PolicyPlanCard from "../PolicyPlanCard";
+import PolicyPlanInfoCard from "../PolicyPlanInfoCard";
 
 function OurPolicies({ plans, toggleModal }) {
   return (
@@ -16,7 +16,7 @@ function OurPolicies({ plans, toggleModal }) {
             {
               plans.map((plan, key) => (
                 <div key={key} className="col-md-6">
-                  <PolicyPlanCard plan={plan} toggleModal={toggleModal} />
+                  <PolicyPlanInfoCard plan={plan} />
                 </div>)
               )
             }
